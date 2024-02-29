@@ -17,6 +17,14 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+input {
+  border: 1px;
+}
+.card {
+  padding: 3px;
+  margin: 5px;
+  border-color: aqua;
+}
 
 @keyframes logo-spin {
   from {

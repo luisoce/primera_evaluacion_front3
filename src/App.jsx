@@ -1,16 +1,28 @@
 import { useState } from 'react'
 import Card from './Components/Card'
-import Form from './Components/Form'
+import Formulario from './Components/Formulario'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [nombre, setNombre] = useState('');
+  const [apellido, setApellido] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Formulario enviado correctamente');
+  }
+  
 
   return (
     <>
-      <Card/>
-      <Form/>
-      <h1>Vite + React</h1>
+        <Formulario 
+        nombre={nombre} 
+        apellido={apellido} 
+        setNombre={setNombre} 
+        setApellido={setApellido}
+        handleSubmit={handleSubmit} 
+        />
+      <Card nombre={nombre} apellido={apellido}/>
       
     </>
   )
